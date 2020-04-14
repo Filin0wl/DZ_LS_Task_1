@@ -2,6 +2,7 @@ package com.example.dz_ls_task1
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +13,7 @@ class SecondActivity : AppCompatActivity() {
     companion object {
         val EXTRA_REPLY = "com.example.android.twoactivities.extra.REPLY"
         private var mReply: EditText? = null
+        private val LOG_TAG = SecondActivity::class.java.simpleName
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,6 +31,7 @@ class SecondActivity : AppCompatActivity() {
         val replyIntent = Intent()
         replyIntent.putExtra(EXTRA_REPLY, reply)
         setResult(RESULT_OK, replyIntent)
+        Log.d(LOG_TAG, "End SecondActivity")
         finish()
     }
 }

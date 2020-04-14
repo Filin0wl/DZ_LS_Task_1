@@ -28,7 +28,40 @@ class MainActivity : AppCompatActivity() {
         mReplyHeadTextView = text_header_reply
         mReplyTextView = text_message_reply
 
+        Log.d(LOG_TAG, "-------")
+        Log.d(LOG_TAG, "onCreate")
 
+
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.d(LOG_TAG,"onRestart")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d(LOG_TAG,"onPause")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d(LOG_TAG,"onDestroy")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d(LOG_TAG,"onResume")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d(LOG_TAG,"onStop")
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.d(LOG_TAG,"onStart")
     }
 
     fun launchSecondActivity(view: View) {
